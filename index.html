@@ -7,11 +7,53 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 4</div>
+    <img src="Seabunny.jpg" style="width:100%">
+    <div class="text">Sea Bunny!! (White)</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 4</div>
+    <img src="Seabunny_orange.jpg" style="width:100%">
+    <div class="text">Sea Bunny!! (Orange)</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 4</div>
+    <img src="Seabunny_yellow.jpg" style="width:100%">
+    <div class="text">Sea Bunny!! (Yellow)</div>
+  </div>
+  
+ <div class="mySlides fade">
+    <div class="numbertext">4 / 4</div>
+    <img src="Seabunny_purple.jpg" style="width:100%">
+    <div class="text">Sea Bunny!! (Purple)</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+<!--  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
   <div class="container">
     <h1>My Favorite Animal</h1>
-    <img id="Placeholder" src="Placeholder.png" alt="Placeholder" width="200">
+    <img id="seab" src="Seabunny.jpg" alt="Seabunny" width="200">
     <p id="setup">Reveal it...</p>
-    <button id="Placeholder">Reveal</button>
+    <button id="reveal">Reveal</button>
   </div>
 
   <script src="script.js"></script>
