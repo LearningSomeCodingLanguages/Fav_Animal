@@ -1,19 +1,28 @@
-let isVisible = false; // Track visibility state
+let slideIndex = 1;
+showSlides(slideIndex);
 
-document.getElementById("showPunchline").addEventListener("click", function() {
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-  // Change HTML
-  document.getElementById("Placeholder").classList.remove("hidden");
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-  document.body.style.backgroundColor = "#ffe4b5";
-
-  document.getElementById("Placeholder").src = "Placeholder.png";
-
-  const Placeholder = document.getElementById("Placeholder");
-  Placeholder.style.transform = "scale(1.5)";
-  Placeholder.style.color = "red";
-
-  setTimeout(() => {
-    Placeholder.style.transform = "scale(1)";
-    Placeholder.style.color = "#2e8b57";
-  }, 1500);
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
