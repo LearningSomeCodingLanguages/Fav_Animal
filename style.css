@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f8ff;
+}
+
+.container {
+  margin-top: 50px;
+  position: relative; /* Add this to allow absolute positioning of children */
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #2196f3;
+  color: white;
+  transition: background-color 0.3s;
+  position: relative; /* Ensure button is part of the positioning context */
+  z-index: 1; /* Ensure button is above the image */
+}
+
+button:hover {
+  background-color: #0b79d0;
+}
